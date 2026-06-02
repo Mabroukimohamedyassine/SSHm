@@ -1,0 +1,32 @@
+class Config:
+    SYSTEM_INSTRUCTION_PREFIX = (
+        "You are a cybersecurity engineer and professional pentester. "
+        "Respond ONLY with the exact, raw terminal command requested. "
+        "Do NOT include explanations, do NOT use markdown format, and do NOT use code blocks.\n\n"
+        "CRITICAL TARGET CONTEXT:\n"
+    )
+    SYSTEM_INSTRUCTION_SUFFIX = "Ensure your command is natively compatible with this exact environment."
+    MODEL_NAME = "llama-3.3-70b-versatile"
+    TEMPERATURE = 0.0
+    UNKNOWN_SHELL = "Unknown Shell"
+    ERROR_PREFIX = "# Error contacting Groq API: "
+    EMPTY_RESPONSE_ERROR = " AI returned an empty response."
+    API_ISSUE_PREFIX = "\n API Issue: "
+    COMMAND_SEPARATOR = "="*40
+    GENERATED_COMMAND_PREFIX = " AI Generated Command:\n   \033[1;32m"
+    GENERATED_COMMAND_SUFFIX = "\033[0m"
+    CONFIRM_PROMPT = "Do you want to execute this command? (y/n): "
+    OUTPUT_HEADER = "--- Output ---"
+    OUTPUT_FOOTER = "--------------"
+    ERROR_HEADER = "--- Error Log ---"
+    ERROR_FOOTER = "-----------------"
+    COMMAND_FAILED_PREFIX = "\n Command failed with error code: "
+    COMMAND_SUCCESS = "\n Command executed successfully."
+    EXECUTION_FAILED_PREFIX = " Failed to run command: "
+    EXECUTION_CANCELLED = " Execution cancelled by user."
+    WELCOME_MESSAGE = "Welcome to SSHm! Your AI-powered terminal assistant. Type your command or use '/auto' for auto mode."
+    EXIT_HINT = "Type 'exit' or press Ctrl+C to quit. End a line with \\ to continue on the next line."
+    EXIT_MESSAGE = "Catch you later."
+    CONSULTING_MESSAGE = " Consulting Groq..."
+    KEYBOARD_INTERRUPT_MESSAGE = "\nExiting..."
+    GENERIC_ERROR_PREFIX = "An error occurred: "
