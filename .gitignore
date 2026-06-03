@@ -29,3 +29,5 @@ venv/
 # Logs and captures
 *.log
 *.pcap
+graphify-out/*
+!graphify-out/graph.html

@@ -1,0 +1,658 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 400,
+      "height": 40,
+      "strokeColor": "#1e40af",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false,
+      "text": "SSHm: AI-Powered Lifecycle",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": null,
+      "originalText": "SSHm: AI-Powered Lifecycle"
+    },
+    {
+      "id": "phase1_box",
+      "type": "rectangle",
+      "x": 50,
+      "y": 80,
+      "width": 250,
+      "height": 200,
+      "strokeColor": "#c2410c",
+      "backgroundColor": "#fed7aa",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 100001,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "arrow1",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "phase1_title",
+      "type": "text",
+      "x": 60,
+      "y": 90,
+      "width": 230,
+      "height": 25,
+      "strokeColor": "#374151",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 100002,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false,
+      "text": "1. INPUT CAPTURE",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "middle",
+      "containerId": null,
+      "originalText": "1. INPUT CAPTURE"
+    },
+    {
+      "id": "phase1_file",
+      "type": "text",
+      "x": 60,
+      "y": 120,
+      "width": 230,
+      "height": 20,
+      "strokeColor": "#64748b",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 100003,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false,
+      "text": "user_input.py",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "middle",
+      "containerId": null,
+      "originalText": "user_input.py"
+    },
+    {
+      "id": "phase1_evidence_bg",
+      "type": "rectangle",
+      "x": 65,
+      "y": 150,
+      "width": 220,
+      "height": 100,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#1e293b",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 100004,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "phase1_evidence_text",
+      "type": "text",
+      "x": 75,
+      "y": 160,
+      "width": 200,
+      "height": 80,
+      "strokeColor": "#ffffff",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 100005,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false,
+      "text": "> scan 10.0.0.1 \\\n  --verbose \\\n  --script=vuln",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "> scan 10.0.0.1 \\\n  --verbose \\\n  --script=vuln"
+    },
+    {
+      "id": "phase2_box",
+      "type": "rectangle",
+      "x": 400,
+      "y": 80,
+      "width": 250,
+      "height": 200,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#3b82f6",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "strokeSharpness": "sharp",
+      "seed": 200001,
+      "version": 1,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "arrow1",
+          "type": "arrow"
+        },
+        {
+          "id": "arrow2",
+          "type": "arrow"
+        },
+        {
+          "id": "arrow3",
+          "type": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "phase2_title",
+      "type": "text",
+      "x": 410,
+      "y": 90,
+      "width": 230,
+      "height": 25,
+      "strokeColor": "#ffffff",
+      "text": "2. ORCHESTRATION",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase2_file",
+      "type": "text",
+      "x": 410,
+      "y": 120,
+      "width": 230,
+      "height": 20,
+      "strokeColor": "#dbeafe",
+      "text": "session.py",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase2_detail",
+      "type": "text",
+      "x": 410,
+      "y": 160,
+      "width": 230,
+      "height": 80,
+      "strokeColor": "#ffffff",
+      "text": "Routes prompts\nCoordinates loops\nManages exceptions",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase3_box",
+      "type": "rectangle",
+      "x": 400,
+      "y": 380,
+      "width": 250,
+      "height": 280,
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "#ddd6fe",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "strokeSharpness": "sharp",
+      "seed": 300001,
+      "version": 1,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "arrow2",
+          "type": "arrow"
+        },
+        {
+          "id": "arrow3",
+          "type": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "phase3_title",
+      "type": "text",
+      "x": 410,
+      "y": 390,
+      "width": 230,
+      "height": 25,
+      "strokeColor": "#374151",
+      "text": "3. INTELLIGENCE",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase3_file",
+      "type": "text",
+      "x": 410,
+      "y": 420,
+      "width": 230,
+      "height": 20,
+      "strokeColor": "#64748b",
+      "text": "agent.py",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase3_evidence_bg",
+      "type": "rectangle",
+      "x": 410,
+      "y": 450,
+      "width": 230,
+      "height": 190,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#1e293b",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "roughness": 0
+    },
+    {
+      "id": "phase3_evidence_text",
+      "type": "text",
+      "x": 420,
+      "y": 460,
+      "width": 210,
+      "height": 160,
+      "strokeColor": "#22c55e",
+      "text": "Context: {\n  \"os\": \"Linux\",\n  \"shell\": \"/bin/bash\",\n  \"cwd\": \"/opt/sshm\"\n}\n\n-> Llama 3 Inference",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "arrow1",
+      "type": "arrow",
+      "x": 300,
+      "y": 180,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "strokeColor": "#c2410c",
+      "strokeWidth": 2,
+      "startBinding": {
+        "elementId": "phase1_box"
+      },
+      "endBinding": {
+        "elementId": "phase2_box"
+      }
+    },
+    {
+      "id": "arrow2",
+      "type": "arrow",
+      "x": 480,
+      "y": 280,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "strokeColor": "#1e3a5f",
+      "strokeWidth": 2,
+      "startBinding": {
+        "elementId": "phase2_box"
+      },
+      "endBinding": {
+        "elementId": "phase3_box"
+      }
+    },
+    {
+      "id": "arrow3",
+      "type": "arrow",
+      "x": 570,
+      "y": 380,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -100
+        ]
+      ],
+      "strokeColor": "#6d28d9",
+      "strokeWidth": 2,
+      "startBinding": {
+        "elementId": "phase3_box"
+      },
+      "endBinding": {
+        "elementId": "phase2_box"
+      }
+    },
+    {
+      "id": "phase4_box",
+      "type": "rectangle",
+      "x": 750,
+      "y": 80,
+      "width": 250,
+      "height": 300,
+      "strokeColor": "#b45309",
+      "backgroundColor": "#fef3c7",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "strokeSharpness": "sharp",
+      "seed": 400001,
+      "version": 1,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "arrow4",
+          "type": "arrow"
+        },
+        {
+          "id": "arrow5",
+          "type": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "phase4_title",
+      "type": "text",
+      "x": 760,
+      "y": 90,
+      "width": 230,
+      "height": 25,
+      "strokeColor": "#374151",
+      "text": "4. SAFETY REVIEW",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase4_file",
+      "type": "text",
+      "x": 760,
+      "y": 120,
+      "width": 230,
+      "height": 20,
+      "strokeColor": "#64748b",
+      "text": "executor.py",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase4_review_bg",
+      "type": "rectangle",
+      "x": 760,
+      "y": 150,
+      "width": 230,
+      "height": 80,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#1e293b",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "roughness": 0
+    },
+    {
+      "id": "phase4_review_text",
+      "type": "text",
+      "x": 770,
+      "y": 160,
+      "width": 210,
+      "height": 60,
+      "strokeColor": "#ffffff",
+      "text": "Confirm: nmap -sV 10.0.0.1\n[y/N] > _",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase4_gate",
+      "type": "diamond",
+      "x": 845,
+      "y": 240,
+      "width": 60,
+      "height": 60,
+      "strokeColor": "#b45309",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 0
+    },
+    {
+      "id": "phase4_gate_text",
+      "type": "text",
+      "x": 855,
+      "y": 255,
+      "width": 40,
+      "height": 30,
+      "strokeColor": "#b45309",
+      "text": "y?",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center"
+    },
+    {
+      "id": "phase5_box",
+      "type": "rectangle",
+      "x": 750,
+      "y": 450,
+      "width": 250,
+      "height": 200,
+      "strokeColor": "#047857",
+      "backgroundColor": "#a7f3d0",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "strokeSharpness": "sharp",
+      "seed": 500001,
+      "version": 1,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "arrow5",
+          "type": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "phase5_title",
+      "type": "text",
+      "x": 760,
+      "y": 460,
+      "width": 230,
+      "height": 25,
+      "strokeColor": "#374151",
+      "text": "5. EXECUTION",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "phase5_detail",
+      "type": "text",
+      "x": 760,
+      "y": 500,
+      "width": 230,
+      "height": 80,
+      "strokeColor": "#374151",
+      "text": "Subprocess Run\nstdout/stderr Capture\nReturn Code Tracking",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left"
+    },
+    {
+      "id": "config_box",
+      "type": "rectangle",
+      "x": 50,
+      "y": 700,
+      "width": 950,
+      "height": 60,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#f8fafc",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "strokeSharpness": "sharp",
+      "seed": 600001,
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "config_title",
+      "type": "text",
+      "x": 60,
+      "y": 720,
+      "width": 930,
+      "height": 25,
+      "strokeColor": "#64748b",
+      "text": "SHARED RESOURCE: config.py (UI Strings, AI Models, System Prompts)",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center"
+    },
+    {
+      "id": "arrow4",
+      "type": "arrow",
+      "x": 650,
+      "y": 180,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "strokeColor": "#1e3a5f",
+      "strokeWidth": 2,
+      "startBinding": {
+        "elementId": "phase2_box"
+      },
+      "endBinding": {
+        "elementId": "phase4_box"
+      }
+    },
+    {
+      "id": "arrow5",
+      "type": "arrow",
+      "x": 875,
+      "y": 380,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "strokeColor": "#b45309",
+      "strokeWidth": 2,
+      "startBinding": {
+        "elementId": "phase4_box"
+      },
+      "endBinding": {
+        "elementId": "phase5_box"
+      }
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "gridSize": 20
+  },
+  "files": {}
+}
