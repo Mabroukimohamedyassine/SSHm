@@ -12,7 +12,7 @@ class Config:
     ERROR_PREFIX = "# Error contacting Groq API: "
     EMPTY_RESPONSE_ERROR = " AI returned an empty response."
     API_ISSUE_PREFIX = "\n API Issue: "
-    COMMAND_SEPARATOR = "="*40
+    COMMAND_SEPARATOR = "=" * 40
     GENERATED_COMMAND_PREFIX = " AI Generated Command:\n   \033[1;32m"
     GENERATED_COMMAND_SUFFIX = "\033[0m"
     CONFIRM_PROMPT = "Do you want to execute this command? (y/n): "

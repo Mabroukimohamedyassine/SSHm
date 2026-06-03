@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sshm"
+version = "0.1.0"
+description = "AI-powered terminal assistant"
+requires-python = ">=3.10"
+dependencies = [
+    "groq",
+    "python-dotenv",
+    "prompt_toolkit",
+]
+
+[project.scripts]
+sshm = "sshm.main:main"

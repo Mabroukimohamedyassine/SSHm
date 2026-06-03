@@ -1,10 +1,11 @@
 import os
+import platform
 from dotenv import load_dotenv
 from groq import Groq
-import platform
-from config import Config
+from .config import Config
 
 load_dotenv()
+
 
 class AIAgent:
     def __init__(self):
@@ -17,28 +18,28 @@ class AIAgent:
             "os": platform.system(),
             "release": platform.release(),
             "cwd": os.getcwd(),
-            "shell": os.environ.get("SHELL", Config.UNKNOWN_SHELL)
+            "shell": os.environ.get("SHELL", Config.UNKNOWN_SHELL),
         }
 
     def ask_groq(self, user_prompt):
         context = self.get_system_context()
         system_instruction = (
-            Config.SYSTEM_INSTRUCTION_PREFIX +
-            f"- Operating System: {context['os']} ({context['release']})\n"
-            f"- Current Directory: {context['cwd']}\n"
-            f"- User's Shell: {context['shell']}\n" +
-            Config.SYSTEM_INSTRUCTION_SUFFIX
+            Config.SYSTEM_INSTRUCTION_PREFIX
+            + f"- Operating System: {context['os']} ({context['release']})\n"
+            + f"- Current Directory: {context['cwd']}\n"
+            + f"- User's Shell: {context['shell']}\n"
+            + Config.SYSTEM_INSTRUCTION_SUFFIX
         )
-        
+
         try:
             # Uses the OpenAI-standard chat completion format
             response = self.client.chat.completions.create(
                 model=Config.MODEL_NAME,  # High quality, ultra-fast free model
                 messages=[
                     {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": user_prompt}
+                    {"role": "user", "content": user_prompt},
                 ],
-                temperature=Config.TEMPERATURE  # Keep it deterministic so it doesn't hallucinate random characters
+                temperature=Config.TEMPERATURE,  # Keep it deterministic so it doesn't hallucinate random characters
             )
             return response.choices[0].message.content.strip()
         except Exception as api_error:

@@ -1,124 +1,111 @@
-# SSHm — AI‑Powered Terminal Assistant (Groq)
+# 🛡️ SSHm: AI-Powered Terminal Assistant
 
-SSHm is a Python CLI assistant that turns natural‑language requests into raw terminal commands using Groq’s chat completion API. It injects local system context (OS, shell, CWD) into the prompt, displays the generated command, asks for confirmation, and executes it locally with captured output.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Groq Powered](https://img.shields.io/badge/AI-Groq%20Llama%203-orange.svg)](https://groq.com/)
 
-The CLI supports auto mode (AI‑generated commands), manual mode (direct command execution), and multi‑line input for complex prompts. It is designed for quick terminal automation with explicit safety confirmation before executing AI suggestions.
+**SSHm** is a high-performance, AI-driven terminal assistant designed specifically for **Cybersecurity Engineers** and **Professional Pentesters**. It bridges the gap between natural language intent and complex terminal execution, leveraging the ultra-fast Groq API and Llama 3 models.
 
-## Features
-1. AI command generation via Groq (`llama-3.3-70b-versatile`)
-2. Environment-aware prompts (OS, release, CWD, shell)
-3. Confirmation gate before executing AI commands
-4. Captured output (stdout/stderr) with exit status reporting
-5. Manual mode for direct command execution
-6. Multi‑line input with `\` continuation
-7. Command suggestions and history via `prompt_toolkit`
+---
 
-## Architecture (High-Level)
-**Flow:** `UserInput → Session → AIAgent (Groq) → Executor → Terminal`
+## ✨ Key Features
 
-```mermaid
-flowchart LR
-  UI[UserInput] --> S[Session]
-  S -->|/auto| AG[AIAgent (Groq API)]
-  AG --> EX[Executor]
-  S -->|/manual| EX
-  EX --> SH[Shell / Subprocess]
-```
+- **🎯 Context-Aware Command Generation**: Automatically detects your OS, Shell, and Working Directory to provide commands that actually work in your specific environment.
+- **⚡ Ultra-Fast Inference**: Powered by Groq, providing near-instant responses even for complex multi-step queries.
+- **🛡️ Safety-First Execution**: Every AI-generated command is presented for review. Nothing runs without your explicit `y` confirmation.
+- **⌨️ Advanced CLI UX**: 
+    - **Multi-line input**: Use `\` to continue long commands.
+    - **Persistent History**: Use Arrow Up/Down to navigate previous prompts.
+    - **Auto-completion**: Intelligent command suggestions for `/auto`, `/manual`, and `/exit`.
+- **📂 Output Capture**: Cleanly separates `stdout` and `stderr` so you can debug failed commands easily.
+- **🛠️ Manual Mode**: Need to run a quick `ls` or `cd`? Use `/manual <command>` without leaving the assistant.
 
-## File / Module Breakdown
-| File | Purpose |
-| --- | --- |
-| `main.py` | Entry point; starts `Session().run()` |
-| `session.py` | Main control loop; routes auto/manual execution |
-| `agent.py` | Groq client + environment context + prompt building |
-| `executor.py` | Command confirmation, execution, output handling |
-| `user_input.py` | CLI input, multiline support, mode parsing, history |
-| `config.py` | Centralized constants and messages |
-| `start_point.md` | Project start documentation and refactor notes |
-| `smart_cli_architecture.svg` | Architecture diagram (visual) |
-| `test.py` | Prompt toolkit test harness (not production flow) |
+---
 
-## Dependencies
-- Python 3.x
-- `groq`
-- `python-dotenv`
-- `prompt_toolkit`
+## 🚀 Getting Started
 
-## Setup
-Install dependencies:
+### Prerequisites
 
+- **Python 3.10 or higher**
+- A **Groq API Key** (Get one for free at [console.groq.com](https://console.groq.com/))
+
+### Installation
+
+#### 1. Quick Install (Linux/Recommended)
+Clone the repo and run the automated installer:
 ```bash
-pip install groq python-dotenv prompt_toolkit
+git clone https://github.com/your-username/sshm.git
+cd sshm
+chmod +x install.sh
+./install.sh
 ```
+*This installs SSHm to `/opt/sshm` and creates a global `sshm` command.*
 
-Create a `.env` file at repo root:
-
+#### 2. Manual Development Setup
 ```bash
-GROQ_API_KEY=your_api_key_here
+git clone https://github.com/your-username/sshm.git
+cd sshm
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
-## Configuration
-All user-facing messages and prompt policy live in `config.py`. Key config values:
-- `MODEL_NAME = "llama-3.3-70b-versatile"`
-- `TEMPERATURE = 0.0` (deterministic output)
-- System prompt prefix/suffix to enforce raw command output only
+### Configuration
 
-## Usage
-Start the CLI:
-
+Create a `.env` file in the root directory:
 ```bash
-python main.py
+echo "GROQ_API_KEY=gsk_your_key_here" > .env
 ```
 
-### Auto Mode (default)
-Use natural language; AI generates a command:
+---
 
-```
-/auto list all python files recursively
-```
+## 📖 Usage Guide
 
-Flow:
-1. AI generates a command
-2. Command shown for confirmation
-3. Enter `y` to execute
-
-### Manual Mode
-Bypass the AI and run directly:
-
-```
-/manual ls -la
+Launch the assistant:
+```bash
+sshm
 ```
 
-Manual mode does not ask for confirmation and uses `subprocess.run(..., shell=True)`.
+### Common Commands
 
-### Multi‑Line Input
-End a line with `\` to continue:
+| Command | Description | Example |
+| :--- | :--- | :--- |
+| **Default** | Direct natural language prompt to AI. | `scan open ports on 10.0.0.1` |
+| `/auto` | Explicitly use AI mode. | `/auto find suid binaries` |
+| `/manual` | Execute a standard shell command. | `/manual grep -r "todo" .` |
+| `/exit` | Exit the session. | `/exit` |
 
+### Multi-line Example
+To input complex instructions, use the backslash (`\`) at the end of lines:
+```text
+/auto find all .log files in /var/log \
+that were modified in the last 24 hours \
+and compress them into a tar.gz archive
 ```
-/auto find all log files \
-and count lines in each
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+sshm/
+├── agent.py      # Groq API integration and system context gathering
+├── session.py    # Main orchestration logic and execution loop
+├── executor.py   # Subprocess management and output handling
+├── user_input.py # Interactive prompt with history and completion
+└── config.py     # Centralized UI strings and AI parameters
 ```
 
-Lines are joined with newlines and sent as a single request.
+---
 
-## Safety & Confirmation Behavior
-- Auto mode always asks for confirmation before executing.
-- Manual mode executes immediately.
-- Commands are executed with `shell=True` (consider security implications).
+## ⚖️ Disclaimer
 
-## Error Handling
-- API errors are returned as strings beginning with `# Error` and printed.
-- Empty responses trigger a specific error message.
-- `KeyboardInterrupt` (Ctrl+C) exits cleanly.
-- Unexpected exceptions are caught and printed with a generic prefix.
+**SSHm is intended for authorized security testing only.**
+The developers are not responsible for any misuse or damage caused by the commands generated by the AI. Always verify the generated command before confirming execution.
 
-## Development Notes
-- The project was refactored from a single-file script into modular components:
-  - `agent.py`, `executor.py`, `user_input.py`, `session.py`
-- `test.py` is a standalone experiment for `prompt_toolkit` history/completion.
-- `start_point.md` includes early design notes and the refactor summary.
+## 📄 License
 
-## Known Gaps
-1. No `requirements.txt` or `pyproject.toml`
-2. No automated tests
-3. No LICENSE file
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+*Built with ❤️ for the security community.*

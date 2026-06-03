@@ -1,2 +1,4 @@
-from session import Session
-if __name__ == "__main__": Session().run()
+from sshm.main import main
+
+if __name__ == "__main__":
+    main()

@@ -1,1 +1,31 @@
+# Environment
 .env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+.cache/
+
+# IDE/editor
+.idea/
+.vscode/
+.DS_Store
+
+# Logs and captures
+*.log
+*.pcap
